@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AES Crypto</title>
+    <meta name="description" content="Encrypt text messages with Advanced Encryption Standard on Android, iOS and Web.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="apple-touch-icon" href="/images/homescreen_icons/icon_196.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/homescreen_icons/icon_196.png" />
+    <link rel="icon" sizes="196x196" href="/images/homescreen_icons/icon_196.png">
+
+    <link href="https://plus.google.com/+EvgeniiNeumerzhitckii" rel="author">
+
+    <!-- build:css(_tmp) css/aes_crypto.css -->
+    <link href="/css/aes_crypto.css" rel="stylesheet" type="text/css" />
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class='layout-outer'>
+      <div class='Navbar'>
+        <a class='Navbar-button Navbar-child' id='DecryptButton' href='#'>Decrypt</a><a class='Navbar-logoLink Navbar-child' href='/' title='AES Crypto Home' >
+          <img class='Navbar-logo Navbar-child' alt='AES Crypto' src='/images/title.png'>
+        </a><a class='Navbar-button Navbar-child is-textRightAligned' id='EncryptButton' href='#'>Encrypt</a>
+      </div>
+      <div class='Content'>
+        <div class='PasswordGroup'>
+          <input id='PasswordField' type='text' class='PasswordField' placeholder='Password' autofocus tabindex='1' autocomplete='off' autocapitalize='off' autocorrect='off' spellcheck='false' />
+          <a class='HelpLink' href='help' title='Help'><img class='HelpLink-image' src='images/help_icon.png' alt='AES Crypto Help' /></a>
+        </div>
+        <textarea id='MessageField' class='MessageField' placeholder='Message' tabindex='2'></textarea>
+      </div>
+    </div>
+
+    <!-- build:js js/aes_crypto.js -->
+    <script src="/js/crypto-js/1-core.js"></script>
+    <script src="/js/crypto-js/2-enc-base64.js"></script>
+    <script src="/js/crypto-js/3-md5.js"></script>
+    <script src="/js/crypto-js/4-evpkdf.js"></script>
+    <script src="/js/crypto-js/5-cipher-core.js"></script>
+    <script src="/js/crypto-js/6-aes.js"></script>
+    <script src="/js/aes_crypto.js"></script>
+    <script src="/js/app.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

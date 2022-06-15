@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  color: $shade30;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+input, textarea {
+  border-radius: $borderRadius;
+  border: 1px solid $shade70;
+  -webkit-appearance: none;
+  padding: $marginSmall;
+}
+
+a { color: $colorLink; }
+
+img { width: 100% }
+
+::placeholder { color: $shade50; }
+
+// Headers
+// -----------
+
+h1, h2, h3, h4 {
+  margin: 2em 0 1em 0;
+}
+
+h1 {
+  font-size: 1.7em;
+  margin-top: 1.2em;
+}
+
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1em; }
+
+

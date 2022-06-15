@@ -1,0 +1,40 @@
+.Content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: $marginSmall;
+}
+
+.MessageField {
+  flex-grow: 1;
+  min-height: 100px; // make sure virtual keyboard does not squish it
+
+  // no flex
+  width: 100%;
+}
+
+// Password group
+
+.PasswordGroup {
+  display: flex;
+  padding-bottom: $marginSmall;
+  min-height: 40px; // make sure virtual keyboard does not squish it
+}
+
+.PasswordField {
+  flex-grow: 1;
+
+  // no flex
+  min-width: 70%;
+}
+
+.HelpLink {
+  display: flex;
+  align-items: center;
+  margin-left: $marginSmall;
+
+  // no flex
+  vertical-align: bottom;
+}
+
+.HelpLink-image { width: 30px; }
