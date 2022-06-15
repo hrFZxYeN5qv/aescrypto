@@ -1,0 +1,7 @@
+AES Crypto encrypts text messages.
+
+It uses Advanced Encryption Standard with a 256-bit key.
+
+AES Crypto is open source and available on Android, iOS and Web.
+
+http://aescrypto.com

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a7j-NT-i3N">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--My View-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="My View" automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vda-r8-dK0"/>
+                        <viewControllerLayoutGuide type="bottom" id="OW3-fG-tcd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="162-fu-lgA">
+                                <rect key="frame" x="11" y="125" width="578" height="431"/>
+                                <accessibility key="accessibilityConfiguration" hint="Message" label=""/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkt-ie-lhn">
+                                <rect key="frame" x="563" y="84" width="22" height="22"/>
+                                <accessibility key="accessibilityConfiguration" hint="Help"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="Bjq-xR-JLy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.7495358910891089" green="0.7495358910891089" blue="0.7495358910891089" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gqK-Ki-Ekk" kind="show" id="QaO-GD-9zB"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9w-bY-0v6">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem title="Copy" id="X6G-BH-lHn">
+                                        <connections>
+                                            <action selector="onCopyTapped:" destination="vXZ-lx-hvc" id="uNe-i6-ECg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fM2-Ko-81K"/>
+                                    <barButtonItem title="Paste" id="u6R-aQ-mzV">
+                                        <connections>
+                                            <action selector="onPasteTapped:" destination="vXZ-lx-hvc" id="K9D-DL-D3Z"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="na2-i6-317"/>
+                                    <barButtonItem title="Clear" id="aeE-Sb-1c5">
+                                        <connections>
+                                            <action selector="onClearTapped:" destination="vXZ-lx-hvc" id="VmY-xa-HfM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.34421997582964942" green="0.74493634259259256" blue="0.37285033861409733" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="27" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5cf-P1-s5I">
+                                <rect key="frame" x="10" y="75" width="540" height="40"/>
+                                <accessibility key="accessibilityConfiguration" hint="Password" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SBf-fx-BIT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="onPasswordChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="CCe-T9-NH3"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5cf-P1-s5I" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="27n-2I-eIE"/>
+                            <constraint firstItem="L9w-bY-0v6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3OE-GK-l8p"/>
+                            <constraint firstItem="5cf-P1-s5I" firstAttribute="top" secondItem="vda-r8-dK0" secondAttribute="bottom" constant="11" id="IwQ-uw-Tpz"/>
+                            <constraint firstAttribute="trailing" secondItem="162-fu-lgA" secondAttribute="trailing" constant="11" id="ML2-Mb-sjH"/>
+                            <constraint firstItem="162-fu-lgA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="11" id="Ti3-Ew-tZF"/>
+                            <constraint firstAttribute="trailing" secondItem="L9w-bY-0v6" secondAttribute="trailing" id="ToD-BA-z5k"/>
+                            <constraint firstItem="OW3-fG-tcd" firstAttribute="top" secondItem="L9w-bY-0v6" secondAttribute="bottom" id="VdY-9Y-thA"/>
+                            <constraint firstItem="bkt-ie-lhn" firstAttribute="centerY" secondItem="5cf-P1-s5I" secondAttribute="centerY" id="bxI-Z9-JYx"/>
+                            <constraint firstAttribute="trailing" secondItem="bkt-ie-lhn" secondAttribute="trailing" constant="15" id="cdD-Yq-oga"/>
+                            <constraint firstItem="162-fu-lgA" firstAttribute="top" secondItem="5cf-P1-s5I" secondAttribute="bottom" constant="10" id="epU-NS-gAA"/>
+                            <constraint firstItem="bkt-ie-lhn" firstAttribute="leading" secondItem="5cf-P1-s5I" secondAttribute="trailing" constant="13" id="lqX-iP-Dlh"/>
+                            <constraint firstItem="L9w-bY-0v6" firstAttribute="top" secondItem="162-fu-lgA" secondAttribute="bottom" id="sBA-6w-S21"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hdh-ZU-9az">
+                        <barButtonItem key="backBarButtonItem" title=" " id="AVy-0P-I6t"/>
+                        <barButtonItem key="leftBarButtonItem" title="Decrypt" id="iNy-W2-Yo4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="decryptClicked:" destination="vXZ-lx-hvc" id="AL8-iz-rdA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Encrypt" id="4HM-Wu-gX7">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="encryptClicked:" destination="vXZ-lx-hvc" id="wy8-FS-igA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="decryptBarButton" destination="iNy-W2-Yo4" id="Hdl-dv-j9f"/>
+                        <outlet property="encryptButton" destination="4HM-Wu-gX7" id="xUc-j1-gVn"/>
+                        <outlet property="messageTextView" destination="162-fu-lgA" id="t3a-Jk-YJi"/>
+                        <outlet property="messageTopMarginConstraint" destination="epU-NS-gAA" id="9YW-7a-pb5"/>
+                        <outlet property="passwordHeightConstraint" destination="SBf-fx-BIT" id="IHv-xa-UxW"/>
+                        <outlet property="passwordTextField" destination="5cf-P1-s5I" id="7UC-LV-SKm"/>
+                        <outlet property="passwordTopMarginConstraint" destination="IwQ-uw-Tpz" id="ZBC-it-Nky"/>
+                        <outlet property="textBottomDistance" destination="VdY-9Y-thA" id="TVo-XN-7OD"/>
+                        <outlet property="toolbar" destination="L9w-bY-0v6" id="jJV-8s-Yh0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="75"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="L4V-cl-Sjt">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="gqK-Ki-Ekk" customClass="HelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dzw-7O-xWT"/>
+                        <viewControllerLayoutGuide type="bottom" id="f87-ld-bIo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Yh-vc-QJG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q82-w3-vbU">
+                                <rect key="frame" x="15" y="74" width="570" height="511"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f87-ld-bIo" firstAttribute="top" secondItem="Q82-w3-vbU" secondAttribute="bottom" constant="15" id="3Wa-tG-ea5"/>
+                            <constraint firstItem="Q82-w3-vbU" firstAttribute="leading" secondItem="1Yh-vc-QJG" secondAttribute="leading" constant="15" id="6RA-T6-Hc9"/>
+                            <constraint firstAttribute="trailing" secondItem="Q82-w3-vbU" secondAttribute="trailing" constant="15" id="Ieb-eR-w4r"/>
+                            <constraint firstItem="Q82-w3-vbU" firstAttribute="top" secondItem="Dzw-7O-xWT" secondAttribute="bottom" constant="10" id="g0i-XM-hfq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help" id="foU-Ru-bi9">
+                        <barButtonItem key="rightBarButtonItem" title="Drawing" id="P9s-Bz-FT7">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="W72-iA-Red" kind="show" id="KXw-eP-dOa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="helpText" destination="Q82-w3-vbU" id="x4J-VA-3Wh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MjI-gE-S3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888.125" y="75"/>
+        </scene>
+        <!--Crypto and Koo-->
+        <scene sceneID="Smf-0l-Lpe">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="W72-iA-Red" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tuv-1c-pzJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5ie-88-uQ3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xDA-A6-Lkd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help.png" translatesAutoresizingMaskIntoConstraints="NO" id="JZi-JF-H6x">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <accessibility key="accessibilityConfiguration" hint="Pencil drawing of Crypto and Koo" label="Drawing">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JZi-JF-H6x" secondAttribute="trailing" id="E7u-Tx-eFS"/>
+                            <constraint firstItem="JZi-JF-H6x" firstAttribute="leading" secondItem="xDA-A6-Lkd" secondAttribute="leading" id="Fog-ZD-WSS"/>
+                            <constraint firstItem="JZi-JF-H6x" firstAttribute="top" secondItem="Tuv-1c-pzJ" secondAttribute="bottom" id="RMh-FF-iWp"/>
+                            <constraint firstAttribute="bottom" secondItem="JZi-JF-H6x" secondAttribute="bottom" id="UQw-iA-r9a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Crypto and Koo" id="tRn-Of-mbb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qvu-OY-XMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2613.75" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1rg-oE-Sr6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a7j-NT-i3N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="mzz-4g-Uag">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.36750370100440138" green="0.80263768564356441" blue="0.38943349331398275" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="hzq-Kd-BRE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4j-KE-MoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461.25" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="help.png" width="600" height="466"/>
+    </resources>
+</document>
